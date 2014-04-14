@@ -76,6 +76,14 @@
     }];
 }
 
+#pragma mark actions
+
+- (IBAction)tweet:(id)sender
+{
+    UIViewController *tweetViewController = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeTwitter];
+    [self presentViewController:tweetViewController animated:YES completion:nil];
+}
+
 #pragma mark - Datasource
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath

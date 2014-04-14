@@ -63,7 +63,13 @@
                             <outlet property="delegate" destination="Edp-8Y-aGM" id="MgB-ry-Ysl"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" id="eiH-LY-CDF"/>
+                    <navigationItem key="navigationItem" id="eiH-LY-CDF">
+                        <barButtonItem key="rightBarButtonItem" title="Tweet" id="WF9-VW-fgi">
+                            <connections>
+                                <action selector="tweet:" destination="Edp-8Y-aGM" id="zpH-mW-Ffq"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fGY-ul-rjq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
