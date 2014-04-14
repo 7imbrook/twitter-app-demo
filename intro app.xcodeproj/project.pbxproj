@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C3B0F8418FC56460002B1F6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C3B0F8318FC56460002B1F6 /* Main.storyboard */; };
+		4C3B0F8718FC56D50002B1F6 /* TimelineController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C3B0F8618FC56D50002B1F6 /* TimelineController.m */; };
 		4C8F8E7818FB33CB00782F38 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C8F8E7718FB33CB00782F38 /* Foundation.framework */; };
 		4C8F8E7A18FB33CB00782F38 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C8F8E7918FB33CB00782F38 /* CoreGraphics.framework */; };
 		4C8F8E7C18FB33CB00782F38 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C8F8E7B18FB33CB00782F38 /* UIKit.framework */; };
@@ -32,6 +34,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4C3B0F8318FC56460002B1F6 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		4C3B0F8518FC56D50002B1F6 /* TimelineController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimelineController.h; sourceTree = "<group>"; };
+		4C3B0F8618FC56D50002B1F6 /* TimelineController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimelineController.m; sourceTree = "<group>"; };
 		4C8F8E7418FB33CB00782F38 /* intro app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "intro app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C8F8E7718FB33CB00782F38 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		4C8F8E7918FB33CB00782F38 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -109,8 +114,11 @@
 			children = (
 				4C8F8E8618FB33CB00782F38 /* AppDelegate.h */,
 				4C8F8E8718FB33CB00782F38 /* AppDelegate.m */,
+				4C3B0F8518FC56D50002B1F6 /* TimelineController.h */,
+				4C3B0F8618FC56D50002B1F6 /* TimelineController.m */,
 				4C8F8E8918FB33CB00782F38 /* Images.xcassets */,
 				4C8F8E7E18FB33CB00782F38 /* Supporting Files */,
+				4C3B0F8318FC56460002B1F6 /* Main.storyboard */,
 			);
 			path = "intro app";
 			sourceTree = "<group>";
@@ -219,6 +227,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C3B0F8418FC56460002B1F6 /* Main.storyboard in Resources */,
 				4C8F8E8218FB33CB00782F38 /* InfoPlist.strings in Resources */,
 				4C8F8E8A18FB33CB00782F38 /* Images.xcassets in Resources */,
 			);
@@ -239,6 +248,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C3B0F8718FC56D50002B1F6 /* TimelineController.m in Sources */,
 				4C8F8E8818FB33CB00782F38 /* AppDelegate.m in Sources */,
 				4C8F8E8418FB33CB00782F38 /* main.m in Sources */,
 			);
@@ -437,6 +447,7 @@
 				4C8F8EA218FB33CB00782F38 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4C8F8EA318FB33CB00782F38 /* Build configuration list for PBXNativeTarget "intro appTests" */ = {
 			isa = XCConfigurationList;
@@ -445,6 +456,7 @@
 				4C8F8EA518FB33CB00782F38 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
