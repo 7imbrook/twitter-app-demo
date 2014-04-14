@@ -30,8 +30,20 @@
     // Do any additional setup after loading the view.
     self.collectionView.dataSource = self;
 
+    // Pull to refresh
+    UIRefreshControl *refreshControl = [[UIRefreshControl alloc] init];
+    [refreshControl addTarget:self action:@selector(startRefresh:) forControlEvents:UIControlEventValueChanged];
+    [self.collectionView addSubview:refreshControl];
+    self.collectionView.alwaysBounceVertical = YES;
+
+    // image loading queue
     imageLoading = [NSOperationQueue new];
 
+    [self loadTweets];
+}
+
+- (void)loadTweets
+{
     // Get Twitter Account
     ACAccountStore *store = [ACAccountStore new];
     ACAccountType *typeTwitter = [store accountTypeWithAccountTypeIdentifier:ACAccountTypeIdentifierTwitter];
@@ -76,12 +88,20 @@
     }];
 }
 
+- (void)startRefresh:(UIRefreshControl *)sender
+{
+    [self loadTweets];
+    [sender endRefreshing];
+}
+
 #pragma mark actions
 
 - (IBAction)tweet:(id)sender
 {
     UIViewController *tweetViewController = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeTwitter];
-    [self presentViewController:tweetViewController animated:YES completion:nil];
+    [self presentViewController:tweetViewController animated:YES completion:^{
+        [self loadTweets];
+    }];
 }
 
 #pragma mark - Datasource
