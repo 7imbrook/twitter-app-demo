@@ -7,12 +7,17 @@
 //
 
 #import "TimelineController.h"
+#import "TweetCell.h"
 
 @interface TimelineController () <UICollectionViewDataSource>
 
 @end
 
 @implementation TimelineController
+{
+    @private
+    NSArray *tweets;
+}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -27,6 +32,7 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.collectionView.dataSource = self;
 }
 
 - (void)didReceiveMemoryWarning
@@ -39,12 +45,16 @@
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    return [collectionView dequeueReusableCellWithReuseIdentifier:@"" forIndexPath:indexPath];
+    TweetCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"tweet" forIndexPath:indexPath];
+
+    // Configure cell here
+
+    return cell;
 }
 
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return 0;
+    return tweets.count;
 }
 
 @end
